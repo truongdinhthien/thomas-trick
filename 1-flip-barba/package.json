@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "parcel ./src/**/*.html",
+    "build": "rm -rf dist && parcel build ./src/**/*.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "gsap": "^3.11.0"
+  }
+}

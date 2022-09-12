@@ -1,0 +1,197 @@
+/* Base css */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --white: #f2e9e1;
+  --black: #121212;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Main css */
+
+.section {
+  padding: 0 3%;
+}
+
+.section__hero {
+  position: relative;
+  z-index: 1;
+  height: 400vh;
+  background: var(--white);
+}
+
+.hero__sticky {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.hero__wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hero__top {
+  flex-basis: 12%;
+}
+
+.hero__middle {
+  flex-grow: 1;
+  overflow: hidden;
+
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  position: relative;
+  height: 100%;
+
+  display: flex;
+}
+
+.hero__middle-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  flex-grow: 1;
+  height: 100%;
+
+  opacity: 0;
+}
+
+.hero__middle-figure img {
+  /* width: 100%; */
+
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__middle-figure--right img {
+  right: 0;
+}
+
+.hero__middle-figure--left img {
+  left: 0;
+}
+
+.hero__bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 0;
+}
+
+.hero__title-duplicate {
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  background: var(--black);
+  color: var(--white);
+
+  text-align: center;
+  text-decoration: line-through;
+  clip-path: inset(0 100% 0 0);
+}
+
+.hero__title {
+  font-size: 8vw;
+  font-weight: bold;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.section__discover {
+  position: relative;
+  z-index: 0;
+  height: 200vh;
+  background: var(--black);
+  color: var(--white);
+}
+
+.discover__sticky {
+  position: sticky;
+  top: 0;
+}
+
+.discover__wrap {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+}
+
+.discover__title {
+  margin-bottom: 2rem;
+  margin-top: 4%;
+
+  font-size: 4vw;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.discover__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5%;
+}
+
+.discover__card {
+  display: flex;
+  flex-direction: column;
+  padding: 8% 10%;
+
+  border: 1px solid var(--white);
+}
+
+.discover__card-figure {
+  width: 100%;
+  padding-top: 100%;
+  background: var(--white);
+}
+
+.discover__card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 8%;
+}
+
+.discover__card-name {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
+  font-weight: 500;
+}
+
+.discover__card-thumb {
+  width: 10%;
+  margin-right: 12px;
+}
+
+.section__grid {
+  height: 200vh;
+  background: var(--white);
+}
