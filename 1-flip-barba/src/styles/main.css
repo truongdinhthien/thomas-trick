@@ -207,6 +207,7 @@ a {
 }
 
 .summary {
+  margin-top: -1px;
   padding: 3%;
   color: #121212;
   font-size: 18px;
